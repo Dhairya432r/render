@@ -15,6 +15,10 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 204,
 };
+app.use("/",(req,res) => {
+    res.send("hello");
+});
+
 app.use(cors(corsOptions)); 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
